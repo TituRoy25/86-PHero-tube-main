@@ -8,10 +8,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
+    <!-- navbar section -->
     <header class="mt-5 mb-2"> 
         <div class="navbar bg-base-100">
             <div class="navbar-start">
-              <img src="Logo.png" alt="">
+              <img class="" src="Logo.png" alt="">
             </div>
             <div class="navbar-center">
               <a class="btn normal-case text-xl">Sort by view</a>
@@ -24,26 +26,47 @@
     </header>
     <hr>
     <main>
+
+        <!-- 4 buttons section -->
         <div class="tab-container w-full">
-            <div id="tab-container" class="tabs p-5 w-96 m-auto text-center flex justify-center">
+            <div id="tab-container" class="gap-2 mt-2 w-80 m-auto text-center justify-center grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4">
                 <!-- <a class="tab">Tab 1</a> 
                 <a class="tab">Tab 2</a> 
                 <a class="tab">Tab 3</a> -->
             </div>
         </div>
 
-        <div id="card-container" class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 gap-2 p-2 ">
-            <!-- <div class="card w-96 bg-base-100 shadow-xl">
+        <!-- cards section -->
+        <div id="card-container" class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-2 p-2">
+            <!-- <div class="card">
+                <figure>
+                    <img class="reletive rounded w-80 h-44" src=${news?.thumbnail}/>
+                    <p class=" absolute text-white text-[10px]">${news?.others?.posted_date}ago</p>
+                </figure>
+                    <div class="card-body grid grid-cols-2">
+                        <div class="w-8 h-8 rounded-full justify-start">
+                            <img src=${news?.authors[0]?.profile_picture}/>
+                        </div>
+                        
+                        <div class="card-actions justify-center">
+                            <h1 class="font-semibold text-[15px]">${news?.title}</h1>
+                            <div class="text-[10px]">
+                                <div class="grid grid-cols-2">
+                                    <div><p class="mr-2">${news?.authors[0]?.profile_name}</p></div>
+                                    <div><p>${news?.authors[0]?.verified}</p></div>
+                                </div>                    
+                                <p>${news?.others?.views}views</p>
+                            </div>
+                        </div>
+                    </div>
             </div> -->
-
+            
         </div>
 
     </main>
     <footer>
 
     </footer>
-
-
     <script src="js/youtube.js"></script>
 </body>
 </html>
